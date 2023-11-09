@@ -345,7 +345,7 @@ h3{
 }
 
 .like-button.animate{
-    animation: like 0.5s ease-in-out;
+    animation: like 0.8s ease-in-out;
 }
 
 @keyframes like{
