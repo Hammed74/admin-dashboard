@@ -7,7 +7,7 @@
   font-family: Raleway, sans-serif;
 }
 :root {
-  --palepurple: #b68cff;
+  --palepurple: #0496d0;
   --mutedwhite: #efeeee;
 }
 .container {
@@ -17,20 +17,22 @@
 }
 
 .sidebar {
-  background-color: var(--palepurple);
+  background-color: #fff;
   box-shadow: 9px 9px 18px #c2c1c1, -9px -9px 18px #ffffff;
   grid-row: 1/3;
   display: grid;
   grid-template-rows: 150px 1fr;
   z-index: 2;
   padding:0 20px;
+  min-width: 280px;
   max-width: 500px;
+  border-right: 8px solid var(--palepurple);
 }
 
 h1{
     font-size: 46px;
     padding-left: 20px;
-    color: #fff;
+    color: var(--palepurple);
 }
 h2{
     font-weight: 500;
@@ -42,7 +44,7 @@ h2{
   display: grid;
   grid-template: 1fr 3fr/ 2fr 1fr;
   padding-top: 20px;
-  padding-left: 20px;
+  padding-left: 85px;
  
 }
 .at-name{
@@ -62,11 +64,12 @@ h2{
 background-color: rgb(230,230,230);
   border-radius: 10px;
   height: 50px;
-  border-radius: 29px;
-  border: none;
+  border-radius: 15px;
+  margin-left: 20px;
   padding: 20px;
   font-size: 20px;
-  color: rgb(115, 0, 255)
+  color: var(--palepurple);
+  border: 2px solid var(--palepurple);
 }
 
 .tools {
@@ -76,6 +79,11 @@ background-color: rgb(230,230,230);
   justify-items: center;
   justify-self: right;
   width: 300px;
+  margin-right: 30px;
+}
+
+.tools > p{
+    font-weight: 600;
 }
 
 .profile-info {
@@ -83,11 +91,22 @@ background-color: rgb(230,230,230);
   grid-template-columns: 1fr 10fr;
   align-items: center;
 }
+.profile-pic{
+    display: flex;
+    border: 5px solid var(--palepurple);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8px;
+}
 .logo {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   text-transform: uppercase;
+  margin-top: 30px;
 }
 
 .buttons {
@@ -105,7 +124,7 @@ background-color: rgb(230,230,230);
   width: 120px;
   height: 50px;
     color: #fff;
-  border-radius: 49px;
+  border-radius: 10px;
   background-color: var(--palepurple);
   box-shadow: 4px 4px 0px 0px rgba(0,0,0,0.79);
   border: none;
@@ -128,7 +147,7 @@ box-shadow: none;
 
 a{
     text-decoration: none;
-    color: #fff;
+    color: var(--palepurple)
 }
 .nav,.settings{
     list-style: none;
@@ -154,7 +173,7 @@ a{
 .main {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 90px;
+  padding: 50px;
 }
 .projects-panel {
   display: grid;
@@ -167,11 +186,12 @@ a{
   border-radius: 20px;
   background-color: #fff;
   box-shadow: 10px 10px 0px -1px var(--palepurple);
-  transition: 0.2s;
+  transition: 0.1s;
   }
 .projects-panel > a > div:active {
 transform: translateX(10px) translateY(10px);
 box-shadow: none;
+z-index: 1;
 }
 .extras {
   display: grid;
@@ -191,7 +211,6 @@ box-shadow: none;
 }
 .announcements {
   margin: 0 20px;
-
   height: 420px;
   width: 300px;
   border-radius: 49px;
@@ -201,11 +220,7 @@ box-shadow: none;
 }
 
 .announcements::before{
-    content: "Announcements";
-    position: relative;
-    top: -50px;
-    left: 5px;
-    font-size: 24px;
+   
 }
 .trending {
   margin: 0 20px;
@@ -235,14 +250,7 @@ box-shadow: none;
 box-shadow: none;
 }
 
-.project1::before{
-content: "Your Feed";
-position: absolute;
-top: 250px;
-    font-size: 30px;
-    color: black;
-    font-weight: 500;
-}
+
 
 .main > div > a > div{
     padding: 15px;
@@ -254,9 +262,60 @@ top: 250px;
     display: inline-block;
  width: 50px;
 }
-
+.home{
+    position: absolute;
+    top: 270px;
+    font-size: 30px;
+    font-weight: 500;
+}
 h3{
     margin-left: 20px;
     align-self: center;
     color: black;
+}
+
+.name{
+    margin-left: 20px;
+}
+.tweet{
+    margin-top: 30px;
+    color: black;
+    grid-area: 2/1/3/3;
+}
+.announcements > p{
+    position: relative;
+    bottom: 50px;
+    left: 10px;
+    font-size: 24px;
+    color: black;
+}
+
+.announcement-messages{
+    width: 80%;
+   
+}
+
+.announcement-messages > p{
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--palepurple);
+}
+.announcements-grid{
+     display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 80%;
+}
+.avi{
+    width: 65px;
+    height: 65px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--palepurple);
+}
+
+::placeholder{
+    text-transform: uppercase;
 }
