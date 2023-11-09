@@ -22,6 +22,10 @@ unlikedBtn.forEach(heart => {
 
 
 card.forEach(cards => {
+    cards.addEventListener("click", () => {
+      cards.style.transform = "translate(10px, 10px)";
+    });
+
     cards.addEventListener("mousedown", () => {
   cards.style.transform = "translate(10px,10px)";
 
