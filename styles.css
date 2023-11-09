@@ -61,7 +61,7 @@ h2{
   align-items: center;
 }
 .search-bar {
-background-color: rgb(230,230,230);
+background-color: rgb(255,255,255);
   border-radius: 10px;
   height: 50px;
   border-radius: 15px;
@@ -159,7 +159,7 @@ a{
   margin: 2px;
   text-decoration: none;
   font-size: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .sidebar > .links > ul > li > a:hover{
@@ -188,11 +188,11 @@ a{
   box-shadow: 10px 10px 0px -1px var(--palepurple);
   transition: 0.1s;
   }
-.projects-panel > a > div:active {
+/* .projects-panel > a > div:active {
 transform: translateX(10px) translateY(10px);
 box-shadow: none;
 z-index: 1;
-}
+} */
 .extras {
   display: grid;
   grid-template-columns: 1fr;
@@ -318,4 +318,56 @@ h3{
 
 ::placeholder{
     text-transform: uppercase;
+}
+
+.trending-list{
+    list-style: none;
+    display: grid;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+}
+
+.trending-list > li{
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--palepurple);
+}
+
+.like-button{
+    grid-area: 2/2/3/3;
+  justify-self: end;
+  align-self: end;
+  z-index: 5;
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+}
+
+.like-button.animate{
+    animation: like 0.5s ease-in-out;
+}
+
+@keyframes like{
+    0%{
+        box-shadow: none;
+        width: 25px;
+        height: 25px;
+    }
+    40%{
+        transform: rotate(-42deg);
+        width: 125px;
+        height: 125px;
+    }
+    60%{
+        transform: rotate(42deg);
+        width: 125px;
+        height: 125px;
+    }
+    100%{
+        box-shadow: none;
+        transform: rotate(0deg);
+        width: 25px;
+        height: 25px;
+    }
 }
