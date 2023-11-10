@@ -1,5 +1,43 @@
 const unlikedBtn = document.querySelectorAll(".like-button");
 const card = document.querySelectorAll(".projects-panel > a > div");
+const menuBtn = document.querySelector(".menu-button-container");
+const sidebar = document.querySelector(".sidebar");
+const container = document.querySelector(".container");
+const headingContainer = document.querySelector(".heading-container");
+const main = document.querySelector(".main");
+const bottomBar = document.querySelector(".bottom-bar");
+const home = document.querySelector(".home");
+const closeBtn = document.querySelector(".close");
+
+menuBtn.addEventListener("touchend", () => {
+  sidebar.style.left = "0px";
+  headingContainer.style.filter = "brightness(0.1)";
+  main.style.filter = "brightness(0.1)";
+  bottomBar.style.filter = "brightness(0.1)";
+  document.body.style.overflow = "hidden";
+});
+
+menuBtn.addEventListener("click", () => {
+  sidebar.style.left = "0px";
+  headingContainer.style.filter = "brightness(0.1)";
+  main.style.filter = "brightness(0.1)";
+  bottomBar.style.filter = "brightness(0.1)";
+});
+
+closeBtn.addEventListener("touchend", () => {
+  sidebar.style.left = "-350px";
+  headingContainer.style.filter = "";
+  main.style.filter = "";
+  bottomBar.style.filter = "";
+  document.body.style.overflow = "";
+});
+
+closeBtn.addEventListener("click", () => {
+  sidebar.style.left = "-350px";
+  headingContainer.style.filter = "";
+  main.style.filter = "";
+  bottomBar.style.filter = "";
+});
 
 unlikedBtn.forEach((heart) => {
   heart.addEventListener("mousedown", function (event) {
@@ -31,7 +69,7 @@ unlikedBtn.forEach((heart) => {
 
 card.forEach((cards) => {
   cards.addEventListener("touchstart", (event) => {
-    event.preventDefault()
+    event.preventDefault();
     cards.style.transform = "translate(10px,10px)";
   });
   cards.addEventListener("touchend", (event) => {
@@ -39,7 +77,7 @@ card.forEach((cards) => {
     cards.style.transform = "";
   });
   cards.addEventListener("mousedown", (event) => {
-    event.preventDefault()
+    event.preventDefault();
     cards.style.transform = "translate(10px,10px)";
 
     cards.addEventListener("mouseup", () => {

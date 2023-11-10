@@ -27,6 +27,7 @@
   min-width: 280px;
   max-width: 500px;
   border-right: 8px solid var(--palepurple);
+  transition: 1s;
 }
 
 h1 {
@@ -45,6 +46,7 @@ h2 {
   grid-template: 1fr 3fr/ auto 1fr;
   padding-top: 20px;
   padding-left: 85px;
+  transition: filter 1s;
 }
 .at-name {
   font-weight: 200;
@@ -52,6 +54,7 @@ h2 {
 .main {
   background-color: var(--mutedwhite);
   grid-column: 2/3;
+  transition: filter 1s;
 }
 
 .search {
@@ -263,6 +266,7 @@ a {
   top: 270px;
   font-size: 30px;
   font-weight: 500;
+    margin-bottom: 20px;
 }
 h3 {
   margin-left: 20px;
@@ -373,6 +377,7 @@ h3 {
     display: none;
     align-items: center;
     justify-content: center;
+    transition: filter 1s;
   }
   .bottom-bar > div{
     display: flex;
@@ -389,13 +394,31 @@ h3 {
     color: #fff;
 
   }
+  .menu-button-container{
+    display: none;
+    margin-left: 10px;
+  }
+  .close{
+    position: absolute;
+    top: 20px;
+    left: 310px
+  }
+
+  .close-button{
+    display: none;
+  }
 @media only screen and (max-width: 1180px){
 .container{
     grid-template: auto 1fr / 100%;
     max-width: 1180px;
 }
 .sidebar{
-    display: none;
+    display: grid;
+    height: 100%;
+    left: -350px;
+    position: fixed;
+    box-shadow: 9px 9px 18px black, -9px -9px 18px black;
+    z-index: 999;
 }
 
 .heading-container{
@@ -420,6 +443,7 @@ h3 {
     justify-self: end;
     width: fit-content;
     align-items: center;
+    margin-right: 10px;
 }
 .tools > p{
     display: none;
@@ -442,7 +466,10 @@ h3 {
 
 }
 .home{
-    top: 220px;
+      position: relative;
+      top: 0px;
+    text-align: center;
+    margin-bottom: 20px;
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
@@ -486,5 +513,14 @@ h3 {
 .search-logo{
     width: 25px;
 }
+.menu-button-container{
+    display: flex;
+}
+.close{
+    display: block;
+}
+ .close-button{
+    display: block;
+  }
 }
 
