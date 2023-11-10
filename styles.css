@@ -42,7 +42,7 @@ h2 {
 .heading-container {
   background-color: var(--mutedwhite);
   display: grid;
-  grid-template: 1fr 3fr/ 2fr 1fr;
+  grid-template: 1fr 3fr/ auto 1fr;
   padding-top: 20px;
   padding-left: 85px;
 }
@@ -399,7 +399,7 @@ h3 {
 }
 
 .heading-container{
-    grid-template: 1fr auto auto/auto 1fr;
+    grid-template: 1fr auto auto/1fr 1fr;
     grid-area: 1/1/2/2;
     height: fit-content;
     width: 100%;
@@ -409,9 +409,8 @@ h3 {
     align-items: start;
 }
 .search-bar{
-    width: 120px;
+    width:80%;
     font-size: 12px;
-    padding-left: 2px;
 }
 
 .tools{
