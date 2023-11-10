@@ -2,6 +2,7 @@ const unlikedBtn = document.querySelectorAll(".like-button")
 const card = document.querySelectorAll(".projects-panel > a > div");
 
 
+
 unlikedBtn.forEach(heart => {
   heart.addEventListener("mousedown", function (event) {
     event.stopPropagation();
@@ -22,13 +23,12 @@ unlikedBtn.forEach(heart => {
 
 
 card.forEach(cards => {
-    cards.addEventListener("click", () => {
-      cards.style.transform = "translate(10px, 10px)";
-    });
+    
 
-    cards.addEventListener("mousedown", () => {
+    cards.addEventListener("mousedown", (event) => {
+        event.preventDefault();
   cards.style.transform = "translate(10px,10px)";
-
+      
   cards.addEventListener("mouseup", () => {
     cards.style.transform = ""
   })
@@ -37,3 +37,5 @@ card.forEach(cards => {
   });
 });
 })
+
+console.log(window.innerWidth)
