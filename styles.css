@@ -72,6 +72,8 @@ h2 {
   font-size: 20px;
   color: var(--palepurple);
   border: 2px solid var(--palepurple);
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .tools {
@@ -317,6 +319,7 @@ h3 {
 
 ::placeholder {
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .trending-list {
