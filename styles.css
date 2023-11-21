@@ -251,10 +251,6 @@ a {
   box-shadow: none;
 }
 
-.announcements:active > p {
-  transform: translate(-10px, -10px);
-}
-
 .trending:active {
   transform: translateX(10px) translateY(10px);
   box-shadow: none;
